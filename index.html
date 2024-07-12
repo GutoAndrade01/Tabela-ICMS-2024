@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela ICMS 2024</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 58px;
+            /* Para compensar a altura do cabeçalho fixo */
+            background-color: rgb(44, 43, 43);
+        }
+
+        .table-wrapper {
+            width: 1350px;
+            overflow-x: auto;
+            max-height: calc(94vh - 145px);
+            /* Altura máxima da tabela com cabeçalho fixo e footer */
+            margin-top: -8px;
+            margin-left: -70px;
+        }
+
+        .table-fixed {
+            width: 80%;
+            /* Ajusta a largura da tabela */
+            max-width: none;
+            /* Remove a largura máxima para expandir completamente */
+            max-height: calc(100vh - 180px);
+            /* Ajusta a altura máxima da tabela */
+        }
+
+        .table-fixed thead {
+            position: sticky;
+            top: 0;
+            /* Fixa o cabeçalho no topo da viewport */
+            background-color: #f8f9fa;
+            z-index: 1;
+        }
+
+        .table-fixed tbody {
+            overflow-y: auto;
+            max-height: calc(100vh - 180px);
+            /* Altura máxima da área de conteúdo da tabela */
+        }
+
+        .table-fixed th,
+        .table-fixed td {
+            min-width: 40px;
+            /* Largura mínima das células */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px;
+            height: 70px;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .highlight {
+            background-color: rgb(13, 240, 100) !important;
+            color: black !important;
+            /* Para garantir que o texto seja visível */
+        }
+
+        .navbar {
+            justify-content: center;
+            align-content: center;
+            background-color: rgb(252, 252, 252);
+        }
+
+        .content {
+            background-color: #f8f9fa;
+            align-content: center;
+            justify-content: center;
+            width: 70vw;
+            margin-left: 290px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <nav class="navbar fixed-top">
+            <span class="navbar-brand mb-0 h1">Tabela ICMS Interestadual 2024</span>
+        </nav>
+
+        <div class="container mt-4">
+            <div class="form-row mb-4">
+                <div class="col">
+                    <input type="text" id="inputOrigem" class="form-control" placeholder="Origem">
+                </div>
+                <div class="col">
+                    <input type="text" id="inputDestino" class="form-control" placeholder="Destino">
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" onclick="highlightValue()">Pesquisar</button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="table table-bordered table-fixed">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ESTADOS</th>
+                            <th>AC</th>
+                            <th>AL</th>
+                            <th>AM</th>
+                            <th>AP</th>
+                            <th>BA</th>
+                            <th>CE</th>
+                            <th>DF</th>
+                            <th>ES</th>
+                            <th>GO</th>
+                            <th>MA</th>
+                            <th>MT</th>
+                            <th>MS</th>
+                            <th>MG</th>
+                            <th>PA</th>
+                            <th>PB</th>
+                            <th>PR</th>
+                            <th>PE</th>
+                            <th>PI</th>
+                            <th>RN</th>
+                            <th>RS</th>
+                            <th>RJ</th>
+                            <th>RO</th>
+                            <th>RR</th>
+                            <th>SC</th>
+                            <th>SP</th>
+                            <th>SE</th>
+                            <th>TO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AC</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">19</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>AL</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">19</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>AM</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>AP</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>BA</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">19</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>CE</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>DF</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>ES</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">17</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>GO</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">17</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>MA</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>MT</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">17</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>MS</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">17</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>MG</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>1</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">18</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>PA</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">19</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>PB</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>PR</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">19</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>PE</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20.5</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>PI</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">21</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>RN</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">18</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>RS</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">17</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>RJ</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>RO</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">19.5</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>RR</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>SC</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">17</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>SP</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">18</td>
+                            <td>7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>SE</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">19</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>TO</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td>12</td>
+                            <td style="background-color: rgba(0, 0, 0, 0.644); color: white;">20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        Desenvolvido por Augusto Andrade &copy; 2024
+    </footer>
+    <script>
+        // Função para destacar a célula com base na origem e destino
+        function highlightValue() {
+            var origem = document.getElementById('inputOrigem').value.toUpperCase();
+            var destino = document.getElementById('inputDestino').value.toUpperCase();
+
+            // Remove highlights existentes
+            var highlightedCells = document.querySelectorAll('.highlight');
+            highlightedCells.forEach(function (cell) {
+                cell.classList.remove('highlight');
+            });
+
+            var table = document.querySelector('.table-fixed');
+            var rows = table.getElementsByTagName('tr');
+            var origemIndex = -1;
+
+            // Encontra o índice da linha de origem
+            for (var i = 1; i < rows.length; i++) {
+                if (rows[i].getElementsByTagName('td')[0].textContent.toUpperCase() === origem) {
+                    origemIndex = i;
+                    break;
+                }
+            }
+
+            // if (origemIndex === -1) {
+            //     alert('Origem não encontrada');
+            //     return;
+            // }
+
+            // Encontra o índice da coluna de destino
+            var headerCells = rows[0].getElementsByTagName('th');
+            var destinoIndex = -1;
+            for (var j = 1; j < headerCells.length; j++) {
+                if (headerCells[j].textContent.toUpperCase() === destino) {
+                    destinoIndex = j;
+                    break;
+                }
+            }
+
+            // if (destinoIndex === -1) {
+            //     alert('Destino não encontrado');
+            //     return;
+            // }
+
+            // Destaca a célula encontrada
+            var cell = rows[origemIndex].getElementsByTagName('td')[destinoIndex];
+            cell.classList.add('highlight');
+
+            // Rola a página até a célula destacada
+            cell.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Chamada da função ao carregar a página
+        window.onload = function () {
+            highlightValue(); // Chama a função de destaque e rolagem ao carregar a página
+        };
+    </script>
+    <!-- <script>
+        function highlightValue() {
+            var origem = document.getElementById('inputOrigem').value.toUpperCase();
+            var destino = document.getElementById('inputDestino').value.toUpperCase();
+
+            // Remove existing highlights
+            var highlightedCells = document.querySelectorAll('.highlight');
+            highlightedCells.forEach(function (cell) {
+                cell.classList.remove('highlight');
+            });
+
+            var table = document.querySelector('table');
+            var rows = table.getElementsByTagName('tr');
+            var origemIndex = -1;
+
+            // Find the origem row index
+            for (var i = 1; i < rows.length; i++) {
+                if (rows[i].getElementsByTagName('td')[0].textContent === origem) {
+                    origemIndex = i;
+                    break;
+                }
+            }
+
+            if (origemIndex === -1) {
+                alert('Origem não encontrada');
+                return;
+            }
+
+            // Find the destino column index
+            var headerCells = rows[0].getElementsByTagName('th');
+            var destinoIndex = -1;
+            for (var j = 1; j < headerCells.length; j++) {
+                if (headerCells[j].textContent === destino) {
+                    destinoIndex = j;
+                    break;
+                }
+            }
+
+            if (destinoIndex === -1) {
+                alert('Destino não encontrado');
+                return;
+            }
+
+            // Highlight the cell
+            var cell = rows[origemIndex].getElementsByTagName('td')[destinoIndex];
+            cell.classList.add('highlight');
+        }
+        // Supondo que você tenha um campo de pesquisa que fornece o valor a ser procurado
+        let searchTerm = "valorPesquisado"; // Substitua "valorPesquisado" pelo termo de pesquisa real
+
+        // Função para rolar para o elemento desejado
+        function scrollToElement() {
+            // Encontra todas as células da tabela que contêm o termo de pesquisa
+            let cells = document.querySelectorAll('.table-fixed td');
+            let foundCell = null;
+
+            // Itera sobre as células para encontrar a célula desejada
+            cells.forEach(cell => {
+                if (cell.textContent.trim() === searchTerm) {
+                    foundCell = cell;
+                    return;
+                }
+            });
+
+            // Se encontrou a célula, rola a página até ela
+            if (foundCell) {
+                foundCell.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Chamada da função ao carregar a página ou ao clicar em um botão de pesquisa, por exemplo
+        scrollToElement();
+
+    </script> -->
+</body>
+
+</html>
